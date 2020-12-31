@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: no-repeat center url('./vika-chartier-CDl0HnKWE8o-unsplash.jpg');
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 500px;
+  height: 500px;
+
+  border: 15px #fff solid;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .4);
+  box-shadow: 0 0 2px 4px rgba(0,0,0,.1),
+  inset 0 0 1px 2px #efefef,
+  inset 0 0 30px black,
+  0 0 10px 3px rgba(0,0,0,.2);
+}
+
+.clock-face {
+  position: relative;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 1em;
+    height: 1em;
+
+    content: '';
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: #a8c5d1;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1),
+    0 0 10px rgba(0,0,0,.2);
+  }
+
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 50%;
+    height: 2px;
+    margin-top: -5px;
+
+    transition-timing-function: cubic-bezier(.9, .54, .26, 1.68);
+    transform: rotate(30deg);
+    transform-origin: 0;
+
+    background-color: #fff;
+    box-shadow: 0 0 0 .1px #fff,
+    0 0 0 1px rgba(0,0,0,.1),
+    0 0 8px rgba(0,0,0,.4),
+    2px 5px 1px rgba(0, 0, 0, .5);
+  }
+
+  .second-hand {
+    transition: all .05s cubic-bezier(.9, .54, .26, 1.68);
+
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: red;
+  }
+
+  .min-hand {
+    width: 45%;
+    height: 5px;
+
+    background-color: yellow;
+  }
+
+  .hour-hand {
+    width: 40%;
+    height: 8px;
+
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+  }
+}
+
+
