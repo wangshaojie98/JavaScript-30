@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h2>Update CSS Variables with <span>JS</span></h2>
+  <div class="controls">
+    <label for="spacing">Spacing：</label>
+    <input type="range" name="spacing" min="0" max="200" id="spacing" value="10">
+    <label for=blur"">Blur：</label>
+    <input type="range" name="blur" min="0" max="100" id="blur" value="5">
+    <label for="baseColor">Base Color</label>
+    <input type="color" name="color" id="color" value="#8aa8af">
+  </div>
+  <code class="result">
+    img { padding: <span id="code-spacing">10</span>px; filter: blur(<span id="code-blur">5</span>px); background: <span id="code-base">#8aa8af</span> }
+  </code>
+  <div class="show"></div>
+  <script src="./index.js"></script>
+</body>
+</html>

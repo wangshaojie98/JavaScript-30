@@ -1,0 +1,4 @@
+:root { --spacing: 10px; --blur: 5px; --base: #8aa8af; }
+
+.show { width: 100px; height: 100px; margin-top: 50px; padding: var(--spacing); background: var(--base); filter: blur(var(--blur)); }
+/*# sourceMappingURL=index.css.map */
